@@ -4,7 +4,6 @@ import arrow.core.firstOrNone
 import arrow.core.getOrElse
 import io.pg.advent.utils.FileUtil
 
-
 fun main(args: Array<String>) {
   val lines = FileUtil.loadFile("/day2.txt")
   val checksumPartOne = generateChecksum(lines.countTwoAndThreeLetters())
@@ -32,8 +31,7 @@ fun generateChecksum(counts: Pair<Int, Int>): Int {
 
 fun commonsLetterMinusOne(lines: List<String>): String {
   lines.map {
-    val hasCommons = lines.firstOrNone { s -> it.hasJustOneLetterChanging(s) }
-    val foundStr = hasCommons.getOrElse { "" }
+    val foundStr = lines.firstOrNone { s -> it.hasJustOneLetterChanging(s) }.getOrElse { "" }
     if (!foundStr.isEmpty()) return foundStr.getCommonsCharMaxOneCharDiverging(it)
   }
   return ""
