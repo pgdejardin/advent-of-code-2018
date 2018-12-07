@@ -3,7 +3,7 @@ package io.pg.advent.day3
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class MainTest {
+class Day3Test {
 
   @Test
   fun `Should transform an input with coord 0, 0`() {
