@@ -31,11 +31,11 @@ internal class Day5Test {
   @Test
   fun `Should get a Pair with the size of min polymer and polymer`() {
     val polymer = "dabAcCaCBAcCcaDA"
-    val expercted = 4
+    val expected = 4
 
     val min = polymer.minPolymerSize()
 
-    assertEquals(4, min)
+    assertEquals(expected, min)
   }
 
 }
